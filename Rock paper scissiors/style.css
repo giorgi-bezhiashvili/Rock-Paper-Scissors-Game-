@@ -1,0 +1,32 @@
+.game{
+  margin-left: 50px;
+  display: inline-block;
+  gap: 20px;
+}
+#rock , #paper , #scissors {
+  background-color: darkgray;
+  width: 160px;
+  height:160px;
+  border-radius: 50%;
+  font-size: 35px;
+}
+body{
+  background-color: black;
+}
+.anwser{
+  color: white;
+}
+#anwsercomp{
+  font-size: 40px;
+}
+#anwserp{
+  font-size: 40px;
+}
+section{
+  display: flex;
+}
+.count{
+  color: white;
+  font-size: 30px;
+  border: 2px solid green;
+}
