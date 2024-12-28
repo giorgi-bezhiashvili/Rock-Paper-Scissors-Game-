@@ -17,7 +17,7 @@ let ResetBtnelem = document.querySelector(".resetBTN")
 let isAutoPlaying = false
 let intervalId
 
-//functions
+//computer move
 function rpsAnswer() {
     return rps[Math.floor(Math.random() * rps.length)]
 }
@@ -28,7 +28,7 @@ function mapRpsSymbolToMove(symbol) {
     if (symbol === "✌") return "scissors"
 }
 
-
+//reset button
 ResetBtnelem.addEventListener("click" , function(){
     
         draw = 0;
@@ -48,37 +48,41 @@ ResetBtnelem.addEventListener("click" , function(){
     
 
 
-
+//click on rock
 rock.addEventListener("click", (e) => {
     humanmove = "rock"
     let computerMoveSymbol = rpsAnswer()
     let computerMove = mapRpsSymbolToMove(computerMoveSymbol)
 
-    youranwser.innerText = `You chose rock`
-    anwsercomp.innerText = `Computer chose ${computerMoveSymbol}`
+    youranwser.innerText = `You chose - ✊`
+    anwsercomp.innerText = `Computer chose - ${computerMoveSymbol}`
     checkResult(humanmove, computerMove)
 })
 
+//click on paper
 paper.addEventListener("click", (e) => {
     humanmove = "paper"
     let computerMoveSymbol = rpsAnswer()
     let computerMove = mapRpsSymbolToMove(computerMoveSymbol)
 
-    youranwser.innerText = `You chose paper`
-    anwsercomp.innerText = `Computer chose ${computerMoveSymbol}`
+    youranwser.innerText = `You chose - ✋`
+    anwsercomp.innerText = `Computer chose - ${computerMoveSymbol}`
     checkResult(humanmove, computerMove)
 })
 
+//click on scissiors
 scissors.addEventListener("click", (e) => {
     humanmove = "scissors"
     let computerMoveSymbol = rpsAnswer()
     let computerMove = mapRpsSymbolToMove(computerMoveSymbol)
 
-    youranwser.innerText = `You chose scissiors`
-    anwsercomp.innerText = `Computer chose ${computerMoveSymbol}`
+    youranwser.innerText = `You chose - ✌`
+    anwsercomp.innerText = `Computer chose - ${computerMoveSymbol}`
     checkResult(humanmove, computerMove)
 })
 
+
+//check results
 function checkResult(human, computer) {
     if (human === computer) {
         winlosedraw.innerText = "It's a draw!"
@@ -99,6 +103,8 @@ function checkResult(human, computer) {
     }
 }
 
+
+//auto play
 function autoPlay() {
     if (!isAutoPlaying) {
         intervalId = setInterval(function () {
