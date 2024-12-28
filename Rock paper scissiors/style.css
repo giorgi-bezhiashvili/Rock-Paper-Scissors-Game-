@@ -30,3 +30,20 @@ section{
   font-size: 30px;
   border: 2px solid green;
 }
+.resetBTN , .auto-play{
+  font-size: 40px;
+  margin-top: 20px;
+  font-weight: bold;
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  cursor: grab;
+}
+.count{
+  display: flex;
+  gap: 50px;
+}
+.auto-play{
+  margin: 20px;
+  background-color: #ffffff;
+}
